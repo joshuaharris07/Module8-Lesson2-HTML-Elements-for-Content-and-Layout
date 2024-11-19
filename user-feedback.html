@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Navigation Page</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+</head>
+
+<body align="center">
+
+    <nav> 
+        <button><a href="index.html">Home</a></button>
+        <button><a href="image-gallery.html">Image Gallery</a></button>
+        <button><a href="user-registration.html">User Registration Form</a></button>
+        <button><a href="data-table.html">Data Presentation Table</a></button>
+    </nav>
+
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>Feedback</legend>
+
+            <label for="name">Name</label>
+            <input type="text" class="form-field" id="name" name="name" placeholder="Enter your name" aria-label="name" required>
+
+            <br>
+            <label for="comments">Comments</label>
+            <textarea name="comments" class="form-field" id="comments" rows="10" cols="80" placeholder="Enter any comments your have" aria-label="comments" required></textarea>
+
+            <br>
+            <label for="suggestions">Suggestions</label>
+            <textarea name="suggestions" class="form-field" id="suggestions" rows="10" cols="80" placeholder="Enter any suggestions you have" aria-label="suggestions" required></textarea>
+        
+            <br>
+            <label for="rating">Rating for this site</label>
+            <input type="range" id="rating" name="rating" min="0" max="10" aria-label="rating" oninput="this.nextElementSibling.value = this.value"> 
+            <output>5</output>
+        </fieldset>
+
+        <div>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit Feedback</button>
+        </div>
+    </form>
+
+</body>
+</html>
